@@ -1,0 +1,4 @@
+requests
+psutil
+pymongo
+psycopg2-binary

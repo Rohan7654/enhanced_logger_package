@@ -1,7 +1,34 @@
+Metadata-Version: 2.1
+Name: enhanced_logger
+Version: 0.1.0
+Summary: An enhanced logging package for Python with additional features and performance metrics.
+Home-page: https://github.com/Rohan7654/enhanced_logger_package.git
+Author: ROHAN
+Author-email: rohanroni2019@gmail.com
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: psutil
+Requires-Dist: pymongo
+Requires-Dist: psycopg2-binary
+
 # Enhanced Logger
 --------------------------
-[![PyPI version](https://badge.fury.io/py/enhanced_logger.svg)](https://pypi.org/project/enhanced-logger/0.1.0/)
-[![Downloads](https://pepy.tech/badge/enhanced_logger)](https://pypi.org/project/enhanced-logger/0.1.0/)
+[![PyPI version](https://badge.fury.io/py/enhanced_logger.svg)](https://pypi.org/project/enhanced_logger/0.1.0/)
+[![Downloads](https://pepy.tech/badge/enhanced_logger)](https://pypi.org/project/enhanced_logger/0.1.0/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 The `Enhanced Logger` package is an extension of the built-in Python `logging` module, designed to address additional features and performance metrics. This package includes:
@@ -26,7 +53,7 @@ The `Enhanced Logger` package is an extension of the built-in Python `logging` m
 To install the Enhanced Logger package, use the following command:
 
 ```sh
-pip install enhanced-logger
+pip install enhanced_logger
 ```
 
 ## Usage
