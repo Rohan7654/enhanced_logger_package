@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name='enhanced_logger',
-    version='0.1',
-    description='Enhanced Logger with JSON, XML formatting, performance metrics, HTTP and DB handlers.',
+    version='0.1.0',
+    description='An enhanced logging package for Python with additional features and performance metrics.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     author='ROHAN',
@@ -11,10 +11,10 @@ setup(
     url='https://github.com/Rohan7654/enhanced_logger_package.git',
     packages=find_packages(),
     install_requires=[
-        'psutil',
         'requests',
+        'psutil',
         'pymongo',
-        'psycopg2-binary'
+        'psycopg2-binary',
     ],
     license='MIT',
     classifiers=[
