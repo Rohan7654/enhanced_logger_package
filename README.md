@@ -1,7 +1,7 @@
 # Enhanced Logger
 --------------------------
-[![PyPI version](https://badge.fury.io/py/enhanced_logger.svg)](https://pypi.org/project/enhanced-logger/0.1.2/)
-[![Downloads](https://pepy.tech/badge/enhanced_logger)](https://pypi.org/project/enhanced-logger/0.1.2/)
+[![PyPI version](https://badge.fury.io/py/enhanced_logger.svg)](https://pypi.org/project/enhanced-logger/)
+[![Downloads](https://pepy.tech/badge/enhanced_logger)](https://pypi.org/project/enhanced-logger/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 The `Enhanced Logger` package is an extension of the built-in Python `logging` module, designed to address additional features and performance metrics. This package includes:
