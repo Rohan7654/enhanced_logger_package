@@ -1,11 +1,16 @@
 # Enhanced Logger
+--------------------------
+[![PyPI version](https://badge.fury.io/py/enhanced_logger.svg)](https://pypi.org/project/enhanced_logger/0.1/)
+[![Downloads](https://pepy.tech/badge/enhanced_logger)](https://pypi.org/project/enhanced_logger/0.1/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-The Enhanced Logger package is an extension of the built-in Python **logging** module, designed to address additional features and performance metrics. This package includes:
+The `Enhanced Logger` package is an extension of the built-in Python `logging` module, designed to address additional features and performance metrics. This package includes:
 
-- Trace logging function entry and exit
+- Trace logging to log all function entry and exit
 - JSON and XML formatters
 - Performance metrics logging
 - HTTP and database logging handlers
+- File logging for all logger types (except DB Handler)
 
 ## Features
 
@@ -14,13 +19,14 @@ The Enhanced Logger package is an extension of the built-in Python **logging** m
 - **Enhanced Formatters:** Log entries in JSON and XML formats.
 - **HTTP Logging:** Send log entries to a remote server via HTTP.
 - **Database Logging:** Store log entries in various types of databases (SQLite, PostgreSQL, MongoDB).
+- **File Logging:** Option to store logs in a `.log` file.
 
 ## Installation
 
 To install the Enhanced Logger package, use the following command:
 
 ```sh
-pip install enhanced-logger
+pip install enhanced_logger
 ```
 
 ## Usage
@@ -179,5 +185,38 @@ mongodb_logger = EnhancedLogger.configure_db_logger('mongodb_logger', 'mongodb',
     'db_name': 'testdb'
 })
 mongodb_logger.info('This is a test log entry stored in a MongoDB database.')
+
+```
+### More Examples
+You can also store logs in a `.log` file by specifying file name for the `log_to_file` argument.
+
+```python
+from enhanced_logger import EnhancedLogger
+
+# JSON Logger
+@EnhancedLogger.json_log('json_logger', log_to_file='json_logs.log')
+def add(x, y):
+    return x + y
+
+print(add(5, 3))
+
+
+# Performance Logger
+performance_logger = EnhancedLogger.configure_performance_logger('performance_logger', log_to_file='performance_logs.log')
+
+@performance_logger.log_performance
+def compute_factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * compute_factorial(n - 1)
+
+print(compute_factorial(10))
+
+# HTTP Logger
+from enhanced_logger import EnhancedLogger
+
+http_logger = EnhancedLogger.configure_http_logger('http_logger', 'http://example.com/log', method='POST', headers={'Content-Type': 'application/json'}, log_to_file='http_logs.log')
+http_logger.info('This is a test log entry sent via HTTP.')
 
 ```
